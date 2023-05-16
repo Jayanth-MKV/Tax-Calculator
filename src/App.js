@@ -12,7 +12,9 @@ function App() {
         <a href='/' className='app-name text-3xl md:text-4xl'>
           Tax Calculator
         </a>
-        <a href='/' className='absolute right-10 app-name text-sm md:text-md'>
+        <a
+          href='https://github.com/Jayanth-MKV/Tax-Calculator'
+          className='absolute right-10 app-name text-sm md:text-md'>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             width='20'
