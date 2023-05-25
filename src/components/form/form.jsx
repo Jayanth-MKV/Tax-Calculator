@@ -80,8 +80,7 @@ const Form = ({ setnum }) => {
       }));
     } else if (name === "Deductions") {
       if (
-        e.target.name === "Basic Deductions - 80C" ||
-        e.target.name === "Interest on Housing Loan - 80EEA"
+        e.target.name === "Basic Deductions - 80C"
       ) {
         if (!deductions[e.target.name] || e.target.value <= 150000) {
           console.log(e.target.value);
@@ -90,7 +89,17 @@ const Form = ({ setnum }) => {
             [e.target.name]: e.target.value,
           }));
         }
-      } else {
+      }
+      else if (e.target.name === "Interest on Housing Loan - 80EEA") {
+        if (!deductions[e.target.name] || e.target.value <= 200000) {
+          console.log(e.target.value);
+          setdeductions((inc) => ({
+            ...inc,
+            [e.target.name]: e.target.value,
+          }));
+        }
+      }
+      else {
         setdeductions((inc) => ({
           ...inc,
           [e.target.name]: e.target.value,

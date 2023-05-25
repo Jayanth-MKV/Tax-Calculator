@@ -242,7 +242,7 @@ const Fnames = [
       {
         name: "Interest on Housing Loan - 80EEA",
         tooltip:
-          "Amount of interest paid on housing loan sanctioned during FY (max: 1.5L)",
+          "Amount of interest paid on housing loan sanctioned during FY (max: 2L)",
       },
       {
         name: "Employee's contribution to NPS - 80CCD",
