@@ -1,70 +1,39 @@
-# Getting Started with Create React App
+# Tax Calculator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" alt="drawing" width="300px" center/>
 
-## Available Scripts
+This is an awesome web app for tax calculation and comparing the old and new tax regimes in India. 🇮🇳🔍
 
-In the project directory, you can run:
+Check it out: [Tax Calculator](https://jayanth-mkv.github.io/Tax-Calculator/)
 
-### `npm start`
+## Description
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The Tax Calculator is a web application designed to help users calculate their income tax liability in India. It provides a user-friendly interface where users can enter their income details, deductions, and other relevant information. The calculator then computes the tax liability based on both the old and new tax regimes, allowing users to compare the tax amounts and make informed decisions.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+- **Income Tax Calculation:** The app accurately calculates the income tax amount based on the user's income, deductions, and applicable tax rates.
+- **Comparison of Tax Regimes:** Users can compare the tax liability under both the old and new tax regimes, enabling them to make informed decisions about which regime is more beneficial for them.
+- **User-Friendly Interface:** The web app offers a simple and intuitive interface, making it easy for users to enter their details and obtain accurate tax calculations.
+- **Responsive Design:** The app is built using responsive design principles, ensuring that it works well on various devices, including desktops, tablets, and mobile phones.
+- **Secure and Private:** The tax calculator prioritizes the security and privacy of user data, ensuring that sensitive information is protected. We do not store your data.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## How to Use
 
-### `npm run build`
+1. Visit the [Tax Calculator](https://jayanth-mkv.github.io/Tax-Calculator/) website.
+2. Enter your income details, deductions, and other relevant information in the provided fields.
+3. Click the "Calculate" button to obtain the tax calculation results.
+4. Compare the tax liability under the old and new tax regimes to make an informed decision.
+5. Feel free to explore different scenarios by modifying the input values and recalculating the tax.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies Used
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- React
+- Tailwind CSS
+- Github Pages
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Contributing
 
-### `npm run eject`
+Contributions to the Tax Calculator project are always welcome! If you find any issues or have ideas for enhancements, feel free to open an issue or submit a pull request. Please ensure that you follow the existing coding style and conventions.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
