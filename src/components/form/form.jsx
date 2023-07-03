@@ -2,6 +2,93 @@ import React, { useState, useEffect, useContext } from "react";
 import { Fnames } from "../../assets/data.js";
 import { DataContext } from "../../contexts/dataContext.js";
 
+
+
+
+
+const FormRender = ({names,income,totalDeductions,totalIncome,updateData,deductions}) => {
+    const [title, settitle] = useState(false);
+
+  return (
+
+            <React.Fragment key={names.title}>
+              <div className='main-head text-3xl text-left font-semibold my-2'>
+                {names.title}
+              </div>
+              <div className='row my-2'>
+                {names.data &&
+                  names.data.map((name,index) => (
+                  <FormBoxRender title={title} settitle={settitle} index={index} name={name} names={names} income={income} updateData={updateData} deductions={deductions} />
+                  ))}
+                <div className='result-income font-medium text-right my-3'>
+                  Total {names.title} :
+                  {names.title === "Income" ? (
+                    <span className='ml-2'>{totalIncome}</span>
+                  ) : (
+                    <span className='ml-2'>{totalDeductions}</span>
+                  )}
+                </div>
+              </div>
+            </React.Fragment>
+
+  );
+}
+
+const FormBoxRender = ({title,settitle,index, names, name, income, updateData, deductions }) => {
+  
+
+  const showToolTip = (e) => {
+    e.preventDefault();
+    settitle(index);
+  }
+
+  return (
+    <div
+      key={name.name}
+      className='form-group col-md-4 text-start'>
+      <label htmlFor='input'>
+        {name.name}
+        <img
+          title={name.tooltip}
+          className='ml-2 d-inline info-icon'
+          src='https://assets1.cleartax-cdn.com/ct-frontend/images/elev_icon.svg'
+          alt="info"
+          onClick={(e)=>showToolTip(e)}
+        />
+        {(index===title) && (<div class="title" onClick={()=>settitle(false)}>{name.tooltip}</div>)}
+      </label>
+      {names.title === "Income" ? (
+        <input
+          onWheelCapture={(e) => {
+            e.target.blur();
+          }}
+          name={name.name}
+          value={income[name.name]}
+          onChange={(e) => updateData(e, names.title)}
+          type='number'
+          className='form-control'
+          id='input'
+        />
+      ) : (
+        <input
+          onWheelCapture={(e) => {
+            e.target.blur();
+          }}
+          name={name.name}
+          value={deductions[name.name]}
+          onChange={(e) => updateData(e, names.title)}
+          type='number'
+          className='form-control'
+          id='input'
+        />
+      )}
+    </div>
+  );
+}
+
+
+
+
 const Form = ({ setnum }) => {
   const dataContext = useContext(DataContext);
   const [income, setincome] = useState(
@@ -119,6 +206,7 @@ const Form = ({ setnum }) => {
     }, 400);
   };
 
+
   // useEffect(() => {
   //   console.log(dataContext.Data);
   // }, [dataContext]);
@@ -128,62 +216,7 @@ const Form = ({ setnum }) => {
       <form className='container p-5' onSubmit={function1}>
         {Fnames &&
           Fnames.map((names) => (
-            <React.Fragment key={names.title}>
-              <div className='main-head text-3xl text-left font-semibold my-2'>
-                {names.title}
-              </div>
-              <div className='row my-2'>
-                {names.data &&
-                  names.data.map((name) => (
-                    <div
-                      key={name.name}
-                      className='form-group col-md-4 text-start'>
-                      <label htmlFor='input'>
-                        {name.name}
-                        <img
-                          title={name.tooltip}
-                          className='ml-2 d-inline info-icon'
-                          src='https://assets1.cleartax-cdn.com/ct-frontend/images/elev_icon.svg'
-                          alt="info"
-                        />
-                      </label>
-                      {names.title === "Income" ? (
-                        <input
-                          onWheelCapture={(e) => {
-                            e.target.blur();
-                          }}
-                          name={name.name}
-                          value={income[name.name]}
-                          onChange={(e) => updateData(e, names.title)}
-                          type='number'
-                          className='form-control'
-                          id='input'
-                        />
-                      ) : (
-                        <input
-                          onWheelCapture={(e) => {
-                            e.target.blur();
-                          }}
-                          name={name.name}
-                          value={deductions[name.name]}
-                          onChange={(e) => updateData(e, names.title)}
-                          type='number'
-                          className='form-control'
-                          id='input'
-                        />
-                      )}
-                    </div>
-                  ))}
-                <div className='result-income font-medium text-right my-3'>
-                  Total {names.title} :
-                  {names.title === "Income" ? (
-                    <span className='ml-2'>{totalIncome}</span>
-                  ) : (
-                    <span className='ml-2'>{totalDeductions}</span>
-                  )}
-                </div>
-              </div>
-            </React.Fragment>
+<FormRender names={names} income={income} totalDeductions={totalDeductions} totalIncome={totalIncome} updateData={updateData} deductions={{deductions}} />
           ))}
         <div className='mb-5 sm:mb-1 main-head text-2xl text-left font-semibold my-2'>
           Total Taxable Income : {totaltaxableincome}
@@ -210,5 +243,7 @@ const Form = ({ setnum }) => {
     </div>
   );
 };
+
+
 
 export default Form;

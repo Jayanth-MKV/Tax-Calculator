@@ -65,3 +65,21 @@ input[type="number"] {
 .show {
     opacity:1;
 }
+
+.info-icon{
+    border-bottom: 1px dotted;
+    position: relative;
+}
+
+.title {
+  position: absolute;
+  z-index: 8888;
+  border: 2px solid black;
+  background: silver;
+  padding: 10px;
+  white-space: wrap;
+}
+
+.text-start label{
+  position: relative;
+}
